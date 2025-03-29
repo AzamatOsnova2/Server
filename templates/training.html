@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Миссия Колонизация Марса</h1>
+        {% if "инженер" in prof or "строитель" in prof %}
+            <h2>Инженерные тренажеры</h2>
+            <img src="{{ url_for('static', filename='img/it.png') }}">
+        {% else %}
+            <h2>Научные симуляторы</h2>
+            <img src="{{ url_for('static', filename='img/ns.png') }}">
+        {% endif %}
+    </body>
+</html>
